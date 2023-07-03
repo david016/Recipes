@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   collapsed = true;
+  // showingRecepies = true; // else ingridients
+  @Output()
+  navigationChanged: EventEmitter<boolean> = new EventEmitter<boolean>();
+
+  changeNavigation(recepies: boolean): void {
+    // this.showingRecepies = !this.showingRecepies;
+    // console.log(this.showingRecepies);
+
+    this.navigationChanged.emit(recepies);
+  }
 }
