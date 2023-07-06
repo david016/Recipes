@@ -16,4 +16,8 @@ export class ShoppingListComponent implements OnInit {
     // this.ingredients.push(new Ingredient('Bananas', 15));
     // throw new Error('Method not implemented.');
   }
+
+  onIngredientAdded(ingredient: Ingredient): void {
+    this.ingredients.push(ingredient);
+  }
 }
