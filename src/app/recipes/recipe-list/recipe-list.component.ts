@@ -17,13 +17,13 @@ export class RecipeListComponent implements OnInit {
   // showRecipe() {
   //   console.log('helo there');
   // }
-  showDetails(recipe: Recipe) {
-    console.log('recipe: ', recipe);
-    this.selectedRecipe = recipe;
-    console.log('selected recipe:', this.selectedRecipe);
-  }
+  // showDetails(recipe: Recipe) {
+  //   console.log('recipe: ', recipe);
+  //   this.selectedRecipe = recipe;
+  //   console.log('selected recipe:', this.selectedRecipe);
+  // }
 
   ngOnInit(): void {
-    this.recipes = this.recipeService.recipes;
+    this.recipes = this.recipeService.getRecipes();
   }
 }
