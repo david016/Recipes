@@ -11,8 +11,8 @@ export class RecipeItemComponent {
   @Input()
   recipe: Recipe;
 
-  @Output()
-  recipeSelected = new EventEmitter<Recipe>();
+  // @Output()
+  // recipeSelected = new EventEmitter<Recipe>();
 
   constructor(private recipeService: RecipeService) {}
 
