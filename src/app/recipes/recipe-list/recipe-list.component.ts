@@ -19,22 +19,11 @@ export class RecipeListComponent implements OnInit {
     private router: Router
   ) {}
 
-  // showRecipe() {
-  //   console.log('helo there');
-  // }
-  // showDetails(recipe: Recipe) {
-  //   console.log('recipe: ', recipe);
-  //   this.selectedRecipe = recipe;
-  //   console.log('selected recipe:', this.selectedRecipe);
-  // }
-
   ngOnInit(): void {
     this.recipes = this.recipeService.getRecipes();
   }
 
   onNewRecipe() {
-    console.log(this.route);
-
-    // this.router.navigate(['new'], { relativeTo: this.route });
+    this.router.navigate(['new'], { relativeTo: this.route });
   }
 }
